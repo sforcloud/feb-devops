@@ -1,0 +1,20 @@
+# This is a sample deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-test-deployment
+  name: my-test-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: my-test-deployment
+  template:
+    metadata:
+      labels:
+        app: my-test-deployment
+    spec:
+      containers:
+      - image: nginx
+        name: nginx

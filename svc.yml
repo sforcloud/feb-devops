@@ -1,0 +1,19 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-nodeport
+  name: my-nodeport
+spec:
+  ports:
+  - name: "80"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: my-nodeport
+  type: NodePort
+status:
+  loadBalancer: {}
