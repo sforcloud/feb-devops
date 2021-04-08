@@ -4,7 +4,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: my-nodeport
+    app: my-test-deployment
   name: my-nodeport
 spec:
   ports:
@@ -13,7 +13,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: my-nodeport
+    app: my-test-deployment
   type: NodePort
 status:
   loadBalancer: {}
